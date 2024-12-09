@@ -1,3 +1,3 @@
 .PHONY: dev-db
 dev-db:
-	docker compose -f .docker/db-docker-compose.yml up
+	docker compose --env-file .env -f .docker/db-docker-compose.yml up
