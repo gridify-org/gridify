@@ -9,7 +9,7 @@
         "lint": "next lint",
         "typecheck": "tsc --noEmit",
         "format": "prettier --write .",
-        "prepare": "husky"
+        "prepare": "cd .. && husky frontend/.husky"
     },
     "dependencies": {
         "@radix-ui/react-slot": "^1.1.0",

@@ -16,4 +16,5 @@
     ],
     "python.analysis.typeCheckingMode": "strict",
     "python.defaultInterpreterPath": "backend/.venv/bin/python",
+    "prettier.configPath": "frontend/.prettierrc"
 }

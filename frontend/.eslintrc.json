@@ -14,5 +14,8 @@
                 "**/*.d.ts"
             ]
         }
-    ]
+    ],
+    "rules": {
+        "@typescript-eslint/no-require-imports": "off"
+    }
 }
