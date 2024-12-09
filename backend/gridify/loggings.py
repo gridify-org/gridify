@@ -9,7 +9,7 @@ class FilterAsyncioLogs(logging.Filter):
 def init_logging() -> None:
     logging.basicConfig(
         level=logging.DEBUG,
-        format="STRIPE - %(asctime)s - %(levelname)s - %(message)s",
+        format="GRIDIFY - %(asctime)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
         handlers=[logging.StreamHandler()],
     )
