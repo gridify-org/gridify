@@ -5,3 +5,4 @@ clean:
 .PHONY: venv
 venv:
 	uv sync --all-groups
+#uv add ...
