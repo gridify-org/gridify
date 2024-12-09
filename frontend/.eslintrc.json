@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "next/core-web-vitals",
+        "next/typescript",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+        {
+            "files": ["**/*{.ts,.tsx,.js,.jsx}"],
+            "excludedFiles": [
+                "src/components/ui/**/*",
+                ".next/**/*",
+                "node_modules/**/*",
+                "**/*.d.ts"
+            ]
+        }
+    ]
+}
