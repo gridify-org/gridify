@@ -1,5 +1,19 @@
 {
     "cSpell.words": [
         "gridify"
-    ]
+    ],
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": true,
+    "mypy-type-checker.args": [
+        "--strict"
+    ],
+    "python.analysis.typeCheckingMode": "strict",
+    "python.defaultInterpreterPath": "backend/.venv/bin/python",
 }
