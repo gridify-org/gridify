@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
-        "gridify"
+        "gridify",
+        "tseslint"
     ],
     "editor.defaultFormatter": "charliermarsh.ruff",
     "python.testing.unittestArgs": [
