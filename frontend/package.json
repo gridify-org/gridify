@@ -11,6 +11,11 @@
         "format": "prettier --write .",
         "prepare": "cd .. && husky frontend/.husky"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit.legacy": "echo hello world"
+        }
+    },
     "dependencies": {
         "@radix-ui/react-slot": "^1.1.0",
         "class-variance-authority": "^0.7.1",

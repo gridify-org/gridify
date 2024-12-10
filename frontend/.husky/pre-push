@@ -1,1 +1,2 @@
 cd ./frontend && yarn format && yarn lint && yarn typecheck
+cd ../backend && uv run pre-commit run --all-files
