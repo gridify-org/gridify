@@ -1,7 +1,30 @@
 import React from "react";
 
-export type IHeader = React.ComponentPropsWithoutRef<"header">;
+import {
+    NavigationMenu,
+    NavigationMenuItem,
+    NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+import SearchBar from "@/components/common/SearchBar/SearchBar";
+import { ISearchArtist } from "@/services/music/serviceInterfaces";
 
-export default function Header({ ...headerProps }: IHeader) {
-    return <header {...headerProps}></header>;
+export type IHeader = React.ComponentPropsWithoutRef<"header"> & {
+    musicService: ISearchArtist;
+};
+
+export default function Header({ musicService, ...headerProps }: IHeader) {
+    return (
+        <header {...headerProps}>
+            <NavigationMenu className="ml-auto">
+                <NavigationMenuList>
+                    <NavigationMenuItem>
+                        <SearchBar
+                            musicService={musicService}
+                            className="m-3"
+                        />
+                    </NavigationMenuItem>
+                </NavigationMenuList>
+            </NavigationMenu>
+        </header>
+    );
 }

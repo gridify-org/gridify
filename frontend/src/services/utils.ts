@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { AxiosInstance, AxiosError } from "axios";
 
 export default function createAxiosInstance(baseURL: string): AxiosInstance {
     const client = axios.create({
@@ -7,3 +7,13 @@ export default function createAxiosInstance(baseURL: string): AxiosInstance {
 
     return client;
 }
+
+export const handleBackendError = (error: AxiosError) => {
+    console.error(error);
+    throw error;
+};
+
+export const handleMusicApiError = (error: AxiosError) => {
+    console.error(error);
+    throw error;
+};
