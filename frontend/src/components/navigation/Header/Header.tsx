@@ -1,11 +1,11 @@
 import React from "react";
 
+import SearchBar from "@/components/common/SearchBar/SearchBar";
 import {
     NavigationMenu,
     NavigationMenuItem,
     NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import SearchBar from "@/components/common/SearchBar/SearchBar";
 import { ISearchArtist } from "@/services/music/serviceInterfaces";
 
 export type IHeader = React.ComponentPropsWithoutRef<"header"> & {

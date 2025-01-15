@@ -1,7 +1,8 @@
+import { ArtistSearchResponse } from "@/schemas/artist";
 import { BaseService } from "@/services/baseService";
+
 import createAxiosInstance, { handleMusicApiError } from "../utils";
 import { ISearchArtist } from "./serviceInterfaces";
-import { ArtistSearchResponse } from "@/schemas/artist";
 
 class MusicService extends BaseService implements ISearchArtist {
     search = async (query: string) => {

@@ -4,10 +4,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";
 
 import ThemeProvider from "@/providers/ThemeProvider";
+import backendService from "@/services/backend/service";
+import musicService from "@/services/music/service";
 
 import { NextPageWithLayout } from "./page";
-import musicService from "@/services/music/service";
-import backendService from "@/services/backend/service";
 
 const queryClient = new QueryClient();
 

@@ -1,12 +1,11 @@
-import ErrorOccurredPage from "@/components/layouts/ErrorOccurredPage";
-import LoadingPage from "@/components/layouts/LoadingPage";
-import { Input } from "@/components/ui/input";
-import { ISearchArtist } from "@/services/music/serviceInterfaces";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
 import { LoaderCircle } from "lucide-react";
-import { ArtistSearchResponse } from "@/schemas/artist";
+import { useEffect, useState } from "react";
+
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { ArtistSearchResponse } from "@/schemas/artist";
+import { ISearchArtist } from "@/services/music/serviceInterfaces";
 
 interface SearchResultsProps {
     results: ArtistSearchResponse;

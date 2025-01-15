@@ -1,5 +1,5 @@
 import { ArtistSearchResponse } from "@/schemas/artist";
 
 export interface ISearchArtist {
-    search: (query: string) => Promise<ArtistSearchResponse>;
+    search: (_query: string) => Promise<ArtistSearchResponse>;
 }

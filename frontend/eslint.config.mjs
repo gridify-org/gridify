@@ -29,7 +29,6 @@ export default tseslint.config({
         eslint.configs.recommended,
         ...tseslint.configs.recommended,
         ...tseslint.configs.stylistic,
-        eslint.configs.jest,
     ],
     rules: {
         "simple-import-sort/imports": "error",

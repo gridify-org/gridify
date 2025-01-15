@@ -1,5 +1,7 @@
-import { NextPageWithLayout } from "@/pages/page";
 import { LoaderCircle } from "lucide-react";
+
+import { NextPageWithLayout } from "@/pages/page";
+
 import PrimaryLayout from "../PrimaryLayout";
 
 const LoadingPage: NextPageWithLayout = () => {

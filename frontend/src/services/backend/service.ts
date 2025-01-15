@@ -1,4 +1,5 @@
 import { BaseService } from "@/services/baseService";
+
 import createAxiosInstance from "../utils";
 
 class BackendService extends BaseService {}
