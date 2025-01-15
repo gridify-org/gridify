@@ -1,4 +1,4 @@
-import axios, { AxiosError,AxiosInstance } from "axios";
+import axios, { AxiosError, AxiosInstance } from "axios";
 
 export default function createAxiosInstance(baseURL: string): AxiosInstance {
     const client = axios.create({
