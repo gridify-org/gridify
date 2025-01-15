@@ -1,3 +1,4 @@
+import os
 from typing import Literal
 
 from pydantic import computed_field
@@ -8,12 +9,13 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     NETWORK_URL: str = "0.0.0.0"
     PORT: int = 5000
-    ENVIRONMENT: Literal["local", "production"] = "local"
+    ENVIRONMENT: Literal["local", "production", "test"] = "local"
 
+    # defaults used for testing
     POSTGRES_HOST: str = "localhost"
     POSTGRES_PORT: int = 5432
-    POSTGRES_USER: str = "gridify"
-    POSTGRES_PASSWORD: str = "gridify_password"
+    POSTGRES_USER: str = "postgres"
+    POSTGRES_PASSWORD: str = "postgres"
     POSTGRES_DB: str = "gridify"
 
     model_config = SettingsConfigDict(
@@ -32,5 +34,21 @@ class Settings(BaseSettings):
             path=self.POSTGRES_DB,
         )
 
+    def get_test_database_uri(self, name: str | None = None) -> str:
+        worker_id = os.getenv("PYTEST_XDIST_WORKER", "gw0")
+        db_name = name or f"gridify_test_{worker_id}"
+        return str(
+            MultiHostUrl.build(
+                scheme="postgresql+psycopg",
+                username="postgres",
+                password="gridify-password",
+                host="localhost",
+                port=5433,
+                path=db_name,
+            )
+        )
+
 
 settings = Settings()
+
+print(settings.DATABASE_URI)

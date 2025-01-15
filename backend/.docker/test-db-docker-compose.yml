@@ -1,0 +1,10 @@
+services:
+    db:
+        image: postgres:latest
+        restart: always
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=gridify-password
+            - POSTGRES_DB=gridify_test
+        ports:
+            - "5433:5432"
