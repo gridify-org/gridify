@@ -1,7 +1,11 @@
 {
     "cSpell.words": [
+        "autouse",
         "gridify",
-        "tseslint"
+        "nonexistent",
+        "sqlmodel",
+        "tseslint",
+        "uvicorn"
     ],
     "editor.defaultFormatter": "charliermarsh.ruff",
     "python.testing.unittestArgs": [
@@ -15,7 +19,16 @@
     "mypy-type-checker.args": [
         "--strict"
     ],
+    "mypy-type-checker.cwd": "${workspaceFolder}/backend",
     "python.analysis.typeCheckingMode": "strict",
     "python.defaultInterpreterPath": "backend/.venv/bin/python",
-    "prettier.configPath": "frontend/.prettierrc"
+    "prettier.configPath": "frontend/.prettierrc",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+    },
+    "ruff.path": ["backend/.venv/bin/ruff"],
+    "ruff.lint.run": "onSave",
+    "editor.formatOnSave": true,
+
+    
 }
