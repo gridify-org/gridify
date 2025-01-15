@@ -3,7 +3,7 @@ name: Backend Code Quality
 on:
     pull_request:
         paths:
-            - "backend/**/*.py"
+            - "backend/**/*"
 
 defaults:
     run:
