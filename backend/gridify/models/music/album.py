@@ -8,4 +8,5 @@ class AlbumRatingBase(RatingBase):
     release_date: date
 
 
-class AlbumRating(AlbumRatingBase, Rating, table=True): ...
+class AlbumRating(AlbumRatingBase, Rating, table=True):  # type: ignore[call-arg]
+    ...

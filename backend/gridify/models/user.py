@@ -12,5 +12,5 @@ class UserBase(SQLModel):
     password: str
 
 
-class User(UserBase, table=True):
+class User(UserBase, table=True):  # type: ignore[call-arg]
     id: IDType = Field(default_factory=id_default_factory, primary_key=True)

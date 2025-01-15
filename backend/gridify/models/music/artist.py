@@ -5,4 +5,5 @@ class ArtistRatingBase(RatingBase):
     name: str
 
 
-class ArtistRating(ArtistRatingBase, Rating, table=True): ...
+class ArtistRating(ArtistRatingBase, Rating, table=True):  # type: ignore[call-arg]
+    ...

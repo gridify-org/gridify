@@ -9,4 +9,5 @@ class SongRatingBase(RatingBase):
     duration_seconds: int = Field(ge=0)
 
 
-class SongRating(SongRatingBase, Rating, table=True): ...
+class SongRating(SongRatingBase, Rating, table=True):  # type: ignore[call-arg]
+    ...
