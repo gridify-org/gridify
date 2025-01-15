@@ -1,9 +1,9 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Home from "./page";
+import React from "react";
 
-describe("renders Welcome to Gridify text", () => {
+import Home from "../pages/index";
+
+describe("Home page", () => {
     it("renders Welcome to Gridify text", () => {
         render(<Home />);
         const welcomeElement = screen.getByText(/Welcome to Gridify/i);

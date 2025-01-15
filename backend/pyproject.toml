@@ -12,6 +12,7 @@ dependencies = [
     "pydantic-settings>=2.7.1",
     "pytest-randomly>=3.16.0",
     "pytest-xdist>=3.6.1",
+    "requests>=2.32.3",
     "sqlmodel>=0.0.22",
     "uvicorn>=0.34.0",
 ]

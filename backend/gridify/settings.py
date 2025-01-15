@@ -1,7 +1,7 @@
 import os
 from typing import Literal
 
-from pydantic import computed_field
+from pydantic import Field, computed_field
 from pydantic_core import MultiHostUrl
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -48,7 +48,7 @@ class Settings(BaseSettings):
             )
         )
 
+    LAST_FM_API_KEY: str = Field(default="")
 
-settings = Settings()
 
-print(settings.DATABASE_URI)
+settings = Settings()  # type: ignore
